@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+}
+
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+
+  background:
+    radial-gradient(circle at top left, #00c6ff55, transparent 35%),
+    radial-gradient(circle at bottom right, #7b2ff755, transparent 35%),
+    linear-gradient(135deg, #07111f, #102a43);
+}
+
+.register-card {
+  width: 100%;
+  max-width: 500px;
+
+  padding: 40px;
+
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  animation: cardAppear 0.7s ease;
+}
+
+@keyframes cardAppear {
+
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-header h1 {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  color: white;
+
+  text-shadow:
+    0 0 20px rgba(0, 198, 255, 0.4);
+}
+
+.register-header p {
+  margin-top: 8px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 15px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.input-group input,
+.input-group select {
+
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 12px;
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-group select option {
+  background: #102a43;
+  color: white;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+
+  border-color: #00c6ff;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    0 0 0 3px rgba(0, 198, 255, 0.15),
+    0 0 20px rgba(0, 198, 255, 0.15);
+}
+
+.register-btn {
+
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 5px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00c6ff,
+      #0072ff
+    );
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(0, 114, 255, 0.3);
+
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 198, 255, 0.45);
+
+}
+
+.register-btn:active {
+  transform: scale(0.98);
+}
+
+.success-message {
+
+  padding: 12px;
+
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  background: rgba(46, 204, 113, 0.15);
+
+  border: 1px solid rgba(46, 204, 113, 0.4);
+
+  color: #6effa5;
+}
+
+.error-message {
+
+  padding: 12px;
+
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  background: rgba(255, 70, 70, 0.15);
+
+  border: 1px solid rgba(255, 70, 70, 0.4);
+
+  color: #ff8d8d;
+}
+
+@media (max-width: 600px) {
+
+  .register-container {
+    padding: 25px 15px;
+  }
+
+  .register-card {
+    padding: 28px 22px;
+  }
+
+  .register-header h1 {
+    font-size: 27px;
+  }
+
+}

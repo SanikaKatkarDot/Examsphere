@@ -1,0 +1,79 @@
+.admin-results {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.results-header {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    border-radius: 15px;
+    color: white;
+}
+
+.results-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+}
+
+.results-header p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+.loading, .no-data {
+    padding: 50px;
+    text-align: center;
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.results-table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.results-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.results-table th {
+    background: #f8f9fa;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+}
+
+.results-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.results-table tr:hover {
+    background: #f5f5f5;
+}
+
+.percentage {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.percentage.pass {
+    background: #d4edda;
+    color: #155724;
+}
+
+.percentage.fail {
+    background: #f8d7da;
+    color: #721c24;
+}

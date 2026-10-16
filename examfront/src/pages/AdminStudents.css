@@ -1,0 +1,145 @@
+.admin-students {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.students-header {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    color: white;
+}
+
+.students-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+}
+
+.students-header p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+.loading, .no-data {
+    padding: 50px;
+    text-align: center;
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.students-table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.students-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.students-table th {
+    background: #f8f9fa;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+}
+
+.students-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.students-table tr:hover {
+    background: #f5f5f5;
+}
+
+.btn-view {
+    padding: 6px 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.btn-view:hover {
+    background: #764ba2;
+}
+
+.student-profile {
+    margin-top: 26px;
+    padding: 22px;
+    border: 1px solid #dce4e1;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.student-profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.student-profile-header span {
+    color: #61766e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.student-profile-header h2 {
+    margin: 4px 0;
+}
+
+.student-profile-header p {
+    margin: 0;
+    color: #66736e;
+}
+
+.profile-results-table {
+    overflow-x: auto;
+}
+
+.profile-results-table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.profile-results-table th,
+.profile-results-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e8edeb;
+    white-space: nowrap;
+}
+
+.profile-results-table th {
+    background: #f3f6f5;
+}
+
+.profile-state {
+    padding: 20px 0;
+    color: #66736e;
+}
+
+.profile-error {
+    color: #a52b2b;
+}
+
+@media (max-width: 600px) {
+    .student-profile-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

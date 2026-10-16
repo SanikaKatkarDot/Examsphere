@@ -1,0 +1,50 @@
+{
+  "name": "online-exam-backend",
+  "version": "1.0.0",
+  "description": "Online Exam Portal Backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed:java": "node seedJavaQuestions.js",
+    "seed:java:test2": "node seedJavaTest2Questions.js",
+    "seed:java:test3": "node seedJavaTest3Questions.js",
+    "seed:java:test4": "node seedJavaTest4Questions.js",
+    "seed:java:test5": "node seedJavaTest5Questions.js",
+    "seed:web": "node seedWebDevelopmentQuestions.js",
+    "seed:web:test2": "node routes/seedWebDevelopmentTest2Question.js",
+    "seed:web:test3": "node routes/seedWebDevelopmentTest3Question.js",
+    "seed:web:test4": "node routes/seedWebTest4Question.js",
+    "seed:web:test5": "node routes/seedWebTest5Question.js",
+    "seed:sql": "node seedSqlDatabaseQuestions.js",
+    "seed:sql:test2": "node routes/seedSqlDatabaseTest2Question.js",
+    "seed:sql:test3": "node routes/seedSqlDatabaseTest3Question.js",
+    "seed:sql:test4": "node routes/seedSqlDatabaseTest4Question.js",
+    "seed:sql:test5": "node routes/seedSqlDatabaseTest5Question.js",
+    "seed:python": "node seedPythonQuestions.js",
+    "seed:python:test2": "node routes/seedPythonTests2Questions.js",
+    "seed:python:test3": "node routes/seedPythonTests3Questions.js",
+    "seed:python:test4": "node routes/seedPythonTests4Questions.js",
+    "seed:python:test5": "node routes/seedPythonTests5Questions.js",
+     "seed:computer": "node seedComputerScienceQuestions.js",
+    "seed:computer:test2": "node routes/seedComputerScienceTest2Question.js",
+    "seed:computer:test3": "node routes/seedComputerScienceTest3Question.js",
+    "seed:computer:test4": "node routes/seedComputerScienceTest4Question.js",
+    "seed:computer:test5": "node routes/seedComputerScienceTest5Question.js",
+    "seed:javascript": "node seedJavaScriptChallengeQuestions.js",
+    "seed:javascript:test2": "node routes/seedJavaScriptChallengeTest2Questions.js",
+    "seed:javascript:test3": "node routes/seedJavaScriptChallengeTest3Questions.js",
+    "seed:javascript:test4": "node routes/seedJavaScriptChallengeTest4Questions.js",
+    "seed:javascript:test5": "node routes/seedJavaScriptChallengeTest5Questions.js"
+    
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.9.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
