@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import API_BASE_URL from "../config/api";
 import "./AdminDashboard.css";
 
 const defaultExams = [
@@ -70,9 +71,9 @@ export default function AdminDashboard() {
         const fetchStats = async () => {
             try {
                 const [usersRes, questionsRes, resultsRes] = await Promise.all([
-                    fetch("http://localhost:5000/api/users"),
-                    fetch("http://localhost:5000/api/questions/all"),
-                    fetch("http://localhost:5000/api/results")
+                    fetch(`${API_BASE_URL}/api/users`),
+                    fetch(`${API_BASE_URL}/api/questions/all`),
+                    fetch(`${API_BASE_URL}/api/results`)
                 ]);
 
                 const usersData = await usersRes.json();

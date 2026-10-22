@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import API_BASE_URL from "../config/api";
 import "./Login.css";
 
 export default function Login() {
@@ -41,7 +42,7 @@ export default function Login() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/users/login",
+        `${API_BASE_URL}/api/users/login`,
         {
           method: "POST",
           headers: {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import API_BASE_URL from "../config/api";
 import "./AdminQuestions.css";
 
 const testSubjects = [
@@ -50,7 +51,7 @@ export default function AdminQuestions() {
 
     const fetchQuestions = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/questions/all");
+            const response = await fetch(`${API_BASE_URL}/api/questions/all`);
             const data = await response.json();
 
             if (!response.ok) {
@@ -83,7 +84,7 @@ export default function AdminQuestions() {
                 ? { ...questionFields, testNumber: Number(testNumber) }
                 : questionFields;
 
-            const response = await fetch("http://localhost:5000/api/questions", {
+            const response = await fetch(`${API_BASE_URL}/api/questions`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -116,7 +117,7 @@ export default function AdminQuestions() {
     const handleDeleteQuestion = async (id) => {
         if (window.confirm("Are you sure you want to delete this question?")) {
             try {
-                const response = await fetch(`http://localhost:5000/api/questions/${id}`, {
+                const response = await fetch(`${API_BASE_URL}/api/questions/${id}`, {
                     method: "DELETE"
                 });
 
@@ -141,7 +142,7 @@ export default function AdminQuestions() {
         if (window.confirm(`Are you sure you want to delete all ${selectedSubject} questions?`)) {
             try {
                 const response = await fetch(
-                    `http://localhost:5000/api/questions/subject/${encodeURIComponent(selectedSubject)}`,
+                    `${API_BASE_URL}/api/questions/subject/${encodeURIComponent(selectedSubject)}`,
                     { method: "DELETE" }
                 );
                 const data = await response.json();

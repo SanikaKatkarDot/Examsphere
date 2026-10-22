@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import API_BASE_URL from "../config/api";
 import "./Result.css";
 
 export default function Result() {
@@ -20,7 +21,7 @@ export default function Result() {
 
     const fetchResults = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/results/user/${userId}`);
+        const response = await fetch(`${API_BASE_URL}/api/results/user/${userId}`);
         const data = await response.json();
         if (!response.ok) {
           throw new Error(data.message || "Unable to load results");

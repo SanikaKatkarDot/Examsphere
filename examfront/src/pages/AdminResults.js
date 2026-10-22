@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import API_BASE_URL from "../config/api";
 import "./AdminResults.css";
 
 export default function AdminResults() {
@@ -30,7 +31,7 @@ export default function AdminResults() {
 
     const fetchResults = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/results");
+            const response = await fetch(`${API_BASE_URL}/api/results`);
             const data = await response.json();
             setResults(data.results || []);
             setLoading(false);

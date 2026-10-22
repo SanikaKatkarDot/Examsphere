@@ -1,0 +1,9 @@
+{
+  "name": "examsphere",
+  "private": true,
+  "scripts": {
+    "start": "npm start --prefix examfront",
+    "build": "npm run build --prefix examfront",
+    "start:backend": "npm start --prefix backend"
+  }
+}

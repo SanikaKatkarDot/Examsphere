@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import API_BASE_URL from "../config/api";
 import "./AdminStudents.css";
 
 export default function AdminStudents() {
@@ -34,7 +35,7 @@ export default function AdminStudents() {
 
     const fetchStudents = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/users");
+            const response = await fetch(`${API_BASE_URL}/api/users`);
             const data = await response.json();
             setStudents(data.users || []);
             setLoading(false);
@@ -56,7 +57,7 @@ export default function AdminStudents() {
         setResultsLoading(true);
 
         try {
-            const response = await fetch(`http://localhost:5000/api/results/user/${student._id}`);
+            const response = await fetch(`${API_BASE_URL}/api/results/user/${student._id}`);
             const data = await response.json();
             if (!response.ok) {
                 throw new Error(data.message || "Unable to load student results");

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import API_BASE_URL from "../config/api";
 import "./Adminlogin.css";
 
 export default function AdminLogin() {
@@ -34,7 +35,7 @@ export default function AdminLogin() {
 
         try {
             const response = await fetch(
-                "http://localhost:5000/api/admin/login",
+                `${API_BASE_URL}/api/admin/login`,
                 {
                     method: "POST",
                     headers: {

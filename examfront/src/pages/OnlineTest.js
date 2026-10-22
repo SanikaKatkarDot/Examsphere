@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
+import API_BASE_URL from "../config/api";
 import "./OnlineTest.css";
 
 
@@ -99,7 +100,7 @@ export default function OnlineTest() {
             try {
 
                 const response = await fetch(
-                    `http://localhost:5000/api/questions/subject/${encodeURIComponent(subject)}${routeTestNumber ? `?testNumber=${testNumber}` : ""}`
+                    `${API_BASE_URL}/api/questions/subject/${encodeURIComponent(subject)}${routeTestNumber ? `?testNumber=${testNumber}` : ""}`
 
                 );
 
@@ -338,7 +339,7 @@ export default function OnlineTest() {
 
         try {
 
-            const response = await fetch("http://localhost:5000/api/results", {
+            const response = await fetch(`${API_BASE_URL}/api/results`, {
 
                 method: "POST",
 
