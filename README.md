@@ -1,4 +1,5 @@
 # Examsphere
+<<<<<<< HEAD
 
 # Examsphere - Online Exam Portal
 
@@ -53,3 +54,6 @@ npm start
 
 Configure your environment variables and MongoDB connection before starting the backend.
 
+=======
+A MERN stack Online Exam Portal featuring user authentication, subject-wise MCQ tests, automatic scoring, and admin exam management.
+>>>>>>> 8be8d08431b83cb77a8895346acda7d3271fe122
