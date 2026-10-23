@@ -183,35 +183,16 @@ export default function Contact() {
 
 
           {/* Social */}
+<div className="social-section">
+  <span>FOLLOW US</span>
 
-          <div className="social-section">
-
-            <span>
-              FOLLOW US
-            </span>
-
-            <div className="social-icons">
-
-              <a href="#" aria-label="LinkedIn">
-                in
-              </a>
-
-              <a href="#" aria-label="Instagram">
-                ◎
-              </a>
-
-              <a href="#" aria-label="GitHub">
-                ◉
-              </a>
-
-              <a href="#" aria-label="Twitter">
-                𝕏
-              </a>
-
-            </div>
-
-          </div>
-
+  <div className="social-icons">
+    <button type="button" aria-label="LinkedIn">in</button>
+    <button type="button" aria-label="Instagram">◎</button>
+    <button type="button" aria-label="GitHub">◉</button>
+    <button type="button" aria-label="Twitter">𝕏</button>
+  </div>
+</div>
         </div>
 
 
