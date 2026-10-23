@@ -1,8 +1,9 @@
 
-const API_BASE_URL =
+const API_BASE_URL = (
   process.env.REACT_APP_API_URL ||
   (process.env.NODE_ENV === "production"
     ? "https://examsphere-sand.vercel.app"
-    : "http://localhost:5000");
+    : "http://localhost:5000")
+).replace(/\/+$/, "");
 
 export default API_BASE_URL;
