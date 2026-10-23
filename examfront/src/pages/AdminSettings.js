@@ -5,7 +5,7 @@ import "./AdminSettings.css";
 export default function AdminSettings() {
 
     const navigate = useNavigate();
-    const [admin, setAdmin] = useState(null);
+    
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -15,28 +15,26 @@ export default function AdminSettings() {
     });
 
     useEffect(() => {
-        const adminData = localStorage.getItem("admin");
-        const userData = localStorage.getItem("examUser");
+    const adminData = localStorage.getItem("admin");
+    const userData = localStorage.getItem("examUser");
 
-        if (!adminData) {
-            // No admin logged in
-            if (userData) {
-                // Regular user trying to access admin panel
-                navigate("/tests");
-            } else {
-                navigate("/adminlogin");
-            }
-            return;
+    if (!adminData) {
+        if (userData) {
+            navigate("/tests");
+        } else {
+            navigate("/adminlogin");
         }
+        return;
+    }
 
-        const parsed = JSON.parse(adminData);
-        setAdmin(parsed);
-        setFormData({
-            ...formData,
-            name: parsed.name,
-            email: parsed.email
-        });
-    }, [navigate]);
+    const parsed = JSON.parse(adminData);
+
+    setFormData(prev => ({
+        ...prev,
+        name: parsed.name || "",
+        email: parsed.email || ""
+    }));
+}, [navigate]);
 
     const handleChange = (e) => {
         setFormData({
